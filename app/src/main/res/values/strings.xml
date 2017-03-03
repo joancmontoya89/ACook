@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ACook</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_eliminar_ingredient_recepta">
+        EliminarIngredientRecepta
+    </string>
+    <string name="title_ctxmenu_afegir_recepta_eliminar">
+        Eliminar
+    </string>
+    <string name="title_activity_recepta">Recepta</string>
+    <string name="title_activity_llibre">Receptes</string>
+    <string name="title_activity_afegir__recepta">Afegir recepta</string>
+</resources>

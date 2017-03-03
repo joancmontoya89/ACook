@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:isScrollContainer="true"
+    tools:context="montoya.girona.joan.idi.fib.acook.Afegir_Recepta"
+    tools:showIn="@layout/activity_afegir__recepta">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/svAfegirRecepta">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayoutAfegirRecepta">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Crea una recepta"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="35dp"
+                    android:id="@+id/tvTitolAfegirRecepta"
+                    android:textColor="@android:color/holo_blue_dark" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etNomAfegirRecepta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nom de la recepta"
+                android:textColorHint="#46889E"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Ingredients"
+                android:textColor="@android:color/holo_blue_dark"
+                android:id="@+id/tvIngredientsAfegirRecepta"
+                android:layout_marginTop="25dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/llhspbtnAfegirRecepta">
+
+                <Spinner
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spIngredients"/>
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" + "
+                    android:onClick="onClickAfegirIngredient"
+                    android:id="@+id/btnAddIngredientAfegirRecepta" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ListView
+                    android:layout_width="290dp"
+                    android:layout_height="100dp"
+                    android:listSelector="#81BEF7"
+                    android:id="@+id/lvIngredientsAfegitsAfegirRecepta"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Qtt."
+                    android:textColorHint="#46889E"
+                    android:id="@+id/etQuantitatAfegirRecepta" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etSubstituts"
+                    android:hint="Introdueix substituts ..."
+                    android:textColorHint="#46889E" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" + "
+                    android:onClick="onClickAfegirSubstitut"
+                    android:id="@+id/btnAddSubstitutAfegirRecepta" />
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:listSelector="#81BEF7"
+                android:id="@+id/lvSubstitutsAfegitsAfegirRecepta" />
+
+            <EditText
+                android:id="@+id/etDescripcioAfegirRecepta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripció"
+                android:textColorHint="#46889E" />
+
+            <EditText
+                android:id="@+id/etTipusCuinaAfegirRecepta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tipus de cuina"
+                android:textColorHint="#46889E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Imatge"
+                android:textColor="@android:color/holo_blue_dark"
+                android:id="@+id/tvImatgeAfegirRecepta"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imgAfegirRecepta" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cercar ..."
+                    android:paddingLeft="20dp"
+                    android:id="@+id/btnAddImatge"
+                    android:onClick="onClickAddImatge" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="30dp"
+                android:layout_gravity="center_horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guardar   "
+                    android:id="@+id/btnSaveAfegirRecepta"
+                    android:onClick="onClickSaveRecepta" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

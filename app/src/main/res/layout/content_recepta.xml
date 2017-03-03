@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_recepta"
+    tools:context=".Recepta">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/svRecepta">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayoutRecepta">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Consulta recepta"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="35dp"
+                    android:textColor="@android:color/holo_blue_dark" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nom de la recepta"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/tvNomRecepta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredients"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:textSize="20dp"
+                android:id="@+id/tvTitolIngredientsAfegitsRecepta"
+                android:textColor="@android:color/holo_blue_dark" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/lvIngredientsAfegitsRecepta" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Substituts dels ingredients"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:id="@+id/tvTitolSubstitutsRecepta" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/lvSubstitutsAfegitsRecepta" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripció de la recepta"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:id="@+id/tvTitolDescripcioRecepta" />
+
+            <TextView
+                android:id="@+id/tvDescripcioRecepta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipus de menjar"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:id="@+id/tvTitolTipusCuinaRecepta" />
+
+            <TextView
+                android:id="@+id/tvTipusCuinaRecepta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:id="@+id/imgRecepta" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="30dp"
+                android:layout_gravity="center_horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Editar"
+                    android:paddingRight="20dp"
+                    android:id="@+id/btnEditRecepta"
+                    android:onClick="onClickEditarRecepta" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eliminar"
+                    android:paddingLeft="20dp"
+                    android:textColor="#FF0000"
+                    android:id="@+id/btnDeleteRecepta"
+                    android:onClick="onClickEliminarRecepta" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
